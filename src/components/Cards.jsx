@@ -122,7 +122,7 @@ function Cards() {
         accountName="chetan"
         storyBorder={true}
         image="https://picsum.photos/800/1000"
-        // comments={commentsThree}
+        comments={commentsThree}
         likedByText="lavi"
         likedByNumber={132}
         hours={2}
