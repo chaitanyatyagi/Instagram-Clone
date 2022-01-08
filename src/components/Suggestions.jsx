@@ -16,7 +16,6 @@ function Suggestions() {
         urlText="Follow"
         iconSize="medium"
         captionSize="small"
-        storyBorder={true}
       />
       <Profile
         username = {name[1]}
@@ -38,7 +37,6 @@ function Suggestions() {
         urlText="Follow"
         iconSize="medium"
         captionSize="small"
-        storyBorder={true}
       />
       <Profile
         username = {name[4]}
