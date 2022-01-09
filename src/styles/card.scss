@@ -60,11 +60,19 @@
     padding: 1.5em 1.25em;
     
     .commentText {
-      color: $font-color-secondary;
+      display: flex;
+      width: 80%;
+
+      input {
+        width: 100%;
+        border: 1px solid white;
+
+      }
     }
     
     .postText {
-      color: $link-color-secondary;
+      cursor: pointer;
+      color: rgb(30, 119, 196);
     }
   }
 }

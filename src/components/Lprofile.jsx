@@ -1,10 +1,8 @@
-import "../styles/profile.scss";
-import ProfileIcon from "./ProfileIcon";
+import "../styles/lprofile.scss";
 import users from "../data/users";
-import {useState} from "react"
+import Liked from "./Liked";
 
-function Profile(props) {
-  const [req, setReq] = useState(true)
+function Lprofile(props) {
   const {
     username,
     caption,
@@ -13,7 +11,7 @@ function Profile(props) {
     captionSize,
     storyBorder,
     hideAccountName,
-    image
+    red
   } = props;
 
   let accountName = username
@@ -22,10 +20,10 @@ function Profile(props) {
 
   return (
     <div className="profile">
-      <ProfileIcon
+      <Liked
         iconSize={iconSize}
         storyBorder={storyBorder}
-        image={image}
+        red = {red}
       />
       {(accountName || caption) && !hideAccountName && (
         <div className="textContainer">
@@ -33,10 +31,9 @@ function Profile(props) {
           <span className={`caption ${captionSize}`}>{caption}</span>
         </div>
       )}
-      {req?<span onClick={()=>setReq(prev => !prev)} style={{color:"rgb(30, 119, 196)"}}>{urlText}</span>:<span onClick={()=>setReq(prev => !prev) } style={{color:"black"}}>Requested</span>}
-      
+      <a href="/">{urlText}</a>
     </div>
   );
 }
 
-export default Profile;
+export default Lprofile;
