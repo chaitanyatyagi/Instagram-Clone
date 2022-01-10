@@ -76,7 +76,7 @@ function Cards() {
       />
       <Card
         accountName="caesar"
-        image="https://picsum.photos/800"
+        image="https://picsum.photos/900/900"
         comments={commentsTwo}
         likedByText="ritika"
         likedByNumber={47}
@@ -94,7 +94,7 @@ function Cards() {
       <Card
         accountName="pawan"
         storyBorder={true}
-        image="https://picsum.photos/800/1000"
+        image="https://picsum.photos/700/1000"
         comments={commentsFour}
         likedByText="hommie"
         likedByNumber={900}
@@ -103,7 +103,7 @@ function Cards() {
       <Card
         accountName="hhh__34"
         storyBorder={true}
-        image="https://picsum.photos/800/1000"
+        image="https://picsum.photos/950/900"
         comments={commentsFive}
         likedByText="shuchu"
         likedByNumber={40}
@@ -112,7 +112,7 @@ function Cards() {
       <Card
         accountName="prachi"
         storyBorder={true}
-        image="https://picsum.photos/800/1000"
+        image="https://picsum.photos/8100/1000"
         comments={commentsSix}
         likedByText="luv_1540"
         likedByNumber={190}

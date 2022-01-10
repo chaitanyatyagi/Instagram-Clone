@@ -3,7 +3,7 @@ import Profile from "./Profile";
 import { ReactComponent as CardButton } from "../images/cardButton.svg";
 import CardMenu from "./CardMenu";
 import Comment from "./Comment";
-import {useState} from "react";
+import {useState,useEffect} from "react";
 import Lprofile from "./Lprofile";
 
 function Card(props) {
@@ -17,11 +17,24 @@ function Card(props) {
     accountName
   } = props;
 
+  useEffect(() => {
+    console.log("profileicon")
+  },[])
+
   const [inputvalue,setInputvalue] = useState("")
 
-  const [publish,setPublish] = useState(0)
 
   const [red,setRed] = useState(true)
+
+  const [cmnt,setCmnt] = useState([])
+
+  const addCmnt = () => {
+    setCmnt([...cmnt,{
+      id:cmnt.length,
+      val:inputvalue
+    }])
+    setInputvalue("")
+  }
 
   return (
     <div className="card">
@@ -51,12 +64,16 @@ function Card(props) {
             />
           );
         })}
-        {publish?<Comment accountName="chetan_1540" comment={inputvalue} /> : "" }
+        {
+          cmnt.map(c => (
+            <Comment key = {c.id} accountName="chetan_1540" comment={c.val} />
+          ))
+        }
       </div>
       <div className="timePosted">{hours} HOURS AGO</div>
       <div className="addComment">
         <div className="commentText"><input type="text" placeholder="Add a comment..." value={inputvalue} onChange = {e => setInputvalue(e.target.value)} /></div>
-        <div className="postText" onClick={publish=>setPublish(publish+1)}>Post</div>
+        <div className="postText" onClick={addCmnt}>Post</div>
       </div>
     </div>
   );

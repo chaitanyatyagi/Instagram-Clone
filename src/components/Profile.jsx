@@ -1,10 +1,15 @@
 import "../styles/profile.scss";
 import ProfileIcon from "./ProfileIcon";
 import users from "../data/users";
-import {useState} from "react"
+import {useState,useEffect} from "react"
+import CompleteProfile from "./CompleteProfile";
 
 function Profile(props) {
   const [req, setReq] = useState(true)
+  
+  useEffect(() => {
+    console.log("profile")
+  },[])
   const {
     username,
     caption,
@@ -29,7 +34,7 @@ function Profile(props) {
       />
       {(accountName || caption) && !hideAccountName && (
         <div className="textContainer">
-          <span className="accountName">{accountName}</span>
+          <span className="accountName"><a href={CompleteProfile}>{accountName}</a></span>
           <span className={`caption ${captionSize}`}>{caption}</span>
         </div>
       )}
