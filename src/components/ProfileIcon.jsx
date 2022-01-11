@@ -18,7 +18,7 @@ function ProfileIcon(props) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  let randomId = getRandomInt(1, 70);
+  let randomId = getRandomInt(1, 71);
 
   let profileImage = image
     ? image
