@@ -1,15 +1,12 @@
 import "../styles/profile.scss";
 import ProfileIcon from "./ProfileIcon";
 import users from "../data/users";
-import {useState,useEffect} from "react"
+import {useState} from "react"
 import CompleteProfile from "./CompleteProfile";
 
 function Profile(props) {
   const [req, setReq] = useState(true)
   
-  useEffect(() => {
-    console.log("profile")
-  },[])
   const {
     username,
     caption,

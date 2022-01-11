@@ -3,7 +3,7 @@ import Profile from "./Profile";
 import { ReactComponent as CardButton } from "../images/cardButton.svg";
 import CardMenu from "./CardMenu";
 import Comment from "./Comment";
-import {useState,useEffect} from "react";
+import {useState} from "react";
 import Lprofile from "./Lprofile";
 
 function Card(props) {
@@ -17,9 +17,6 @@ function Card(props) {
     accountName
   } = props;
 
-  useEffect(() => {
-    console.log("profileicon")
-  },[])
 
   const [inputvalue,setInputvalue] = useState("")
 
