@@ -55,7 +55,7 @@ function Cards() {
 
   const commentsSix = [
     {
-      user: "rakesh",
+      user: "rakesh_1540",
       text: "bravo !!",
       id: 5,
     },
